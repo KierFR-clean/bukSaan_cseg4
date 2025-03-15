@@ -9,7 +9,7 @@ if keyboard_check_pressed(vk_down) {
 if keyboard_check_pressed(vk_enter) {
 	switch(s_option) {
 		case 0:
-			room_goto(rm_attic);//go to opening scene
+			room_goto(rm_living);//go to opening scene
 			break;
 		case 1: //la paang settings
 			break;
