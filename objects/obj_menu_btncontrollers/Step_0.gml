@@ -9,7 +9,7 @@ if keyboard_check_pressed(vk_down) {
 if keyboard_check_pressed(vk_enter) {
 	switch(s_option) {
 		case 0:
-			room_goto(rm_living);//go to opening scene
+			room_goto(rm_narration);//go to opening scene
 			break;
 		case 1: //la paang settings
 			break;
@@ -18,6 +18,11 @@ if keyboard_check_pressed(vk_enter) {
 			break;
 	}   
 	
+}
+
+//fullscreen
+if (keyboard_check_pressed(vk_f11)) {
+    window_set_fullscreen(!window_get_fullscreen());
 }
 
 
