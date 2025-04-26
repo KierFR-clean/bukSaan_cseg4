@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
   "%Name":"Painting_1",
-  "bboxMode":0,
-  "bbox_bottom":139,
+  "bboxMode":2,
+  "bbox_bottom":113,
   "bbox_left":0,
   "bbox_right":291,
   "bbox_top":0,

@@ -1,0 +1,1 @@
+show_painting_message = false;

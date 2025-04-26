@@ -1,0 +1,14 @@
+text[0] = "It's Rainstorm outside, wind howling against the windows. Inside, the atmosphere is cozy but mysterious, with dark corners filled with old artifacts and shadows.";
+text[1] = "Diego's frustration with the rain leads the siblings to take shelter in the house. Nothing to do, they explore the living room.";
+text[2] = "While exploring the living room, they notice an old portrait of their grandfather and his cryptic note, \"Ang sagot ay nakatago sa bagyo.\"";
+text[3] = "This hints at the first puzzle and begins the mystery.";
+text_current = 0;
+text_last = 3;
+text_width = 1152;
+text_x = 400;
+text_y = 216;
+char_current = 0;
+char_speed = 0.10;
+text_completed = false;
+text[text_current] = string_wrap(text[text_current], text_width);
+text[text_current] = string_replace_all(text[text_current], "\n", "\n\n ");
