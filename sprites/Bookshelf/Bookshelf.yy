@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
   "%Name":"Bookshelf",
-  "bboxMode":0,
-  "bbox_bottom":335,
+  "bboxMode":2,
+  "bbox_bottom":201,
   "bbox_left":0,
   "bbox_right":456,
   "bbox_top":0,
