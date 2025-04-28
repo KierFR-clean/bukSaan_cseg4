@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_table",
+  "%Name":"Object43",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_table",
+  "name":"Object43",
   "overriddenProperties":[],
   "parent":{
     "name":"obj_Living_Room",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Table",
-    "path":"sprites/Table/Table.yy",
+    "name":"Plant_Vase",
+    "path":"sprites/Plant_Vase/Plant_Vase.yy",
   },
   "spriteMaskId":null,
   "visible":true,

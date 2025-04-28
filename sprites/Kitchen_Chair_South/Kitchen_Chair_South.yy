@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"Kitchen_Chair_South",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":149,
   "bbox_left":0,
   "bbox_right":99,
-  "bbox_top":0,
+  "bbox_top":48,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

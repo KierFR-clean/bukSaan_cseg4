@@ -8,28 +8,38 @@ switch(current_state) {
             
         
             with(obj_emilio) {
-				var start_x = x;              
-                var start_y = y;
+				var start_x = 1247;              
+                var start_y = 674;
                 var target_x = obj_diego.x - 60;
                 var target_y = obj_amara.y + 50;
                 
         
 				// Create a custom path instead of using mp_grid_path
                other.path_to_follow = path_add();
-                path_set_kind(other.path_to_follow, 1);      
-                path_set_precision(other.path_to_follow, 6); 
+                path_set_kind(other.path_to_follow, 1);      // Set to smooth path
+                path_set_precision(other.path_to_follow, 8); // Increase precision for smoother curves
+                    
+                // New path points based on the white line in the image
+				path_add_point(other.path_to_follow, 1147, 574, 100);   // initial position
+               // path_add_point(other.path_to_follow, 1150, 674, 100);   // Move left
+                //path_add_point(other.path_to_follow, 1050, 660, 100);   // Curve slightly
+                //path_add_point(other.path_to_follow, 950, 610, 100);    // Continue curving
+                path_add_point(other.path_to_follow, 800, 550, 100);    // Move up and left
+                path_add_point(other.path_to_follow, 830, 380, 100);    // Continue up
+                path_add_point(other.path_to_follow, 760, 330, 100);    // Move left
+                path_add_point(other.path_to_follow, 680, 320, 100);    // Continue left with slight curve
+                path_add_point(other.path_to_follow, 600, 335, 100);    // Curve downward slightly
+                path_add_point(other.path_to_follow, target_x, target_y, 100); // End near characters
                 
+                // Make the path visible for debugging (can be removed later)
+                path_set_closed(other.path_to_follow, false);
                 
-                path_add_point(other.path_to_follow, 1247, 674, 4);   //initial position 1250,684
-               path_add_point(other.path_to_follow, 1072, 678, 4);           // Move left
-               path_add_point(other.path_to_follow, 1072, 245, 4);           // move up
-                path_add_point(other.path_to_follow, 863, 245, 4);           // move left
-                path_add_point(other.path_to_follow, 863, 432, 4);           // move down
-                path_add_point(other.path_to_follow, 569, 447, 4);           // move left
-             path_add_point(other.path_to_follow, target_x, target_y, 4); // End near characters
+                // Set initial walking animation based on first path segment direction
+                sprite_index = walk_sprite[1]; // Start with walking left
+                image_speed = walk_speed; // Set animation speed
                 
                 // Start Emilio on the path
-              path_start(other.path_to_follow, move_speed, path_action_stop, true);
+                path_start(other.path_to_follow, move_speed, path_action_stop, true);
             }
         }
         break;
@@ -38,14 +48,44 @@ switch(current_state) {
 	 case SceneState.EMILIO_WALKING:
         
         with(obj_emilio) {
-    if (path_position == 1) {
-        path_end();
-        sprite_index = spr_emilio_idle_b;
-        image_speed = idle_speed;
-        has_reached_target = true; // Flag to prevent position reset
-        other.current_state = SceneState.DIALOGUE;
-    }
-}
+            // Update animation based on current path direction
+            if (path_index != -1) {
+                var dx = path_get_x(path_index, path_position + 0.01) - x;
+                var dy = path_get_y(path_index, path_position + 0.01) - y;
+                
+                // Set facing and animation based on dominant direction
+                if (abs(dx) > abs(dy)) {
+                    // Horizontal movement is dominant
+                    if (dx > 0) {
+                        sprite_index = walk_sprite[3]; // Right
+                        facing = 3;
+                    } else {
+                        sprite_index = walk_sprite[1]; // Left
+                        facing = 1;
+                    }
+                } else {
+                    // Vertical movement is dominant
+                    if (dy > 0) {
+                        sprite_index = walk_sprite[0]; // Down
+                        facing = 0;
+                    } else {
+                        sprite_index = walk_sprite[2]; // Up
+                        facing = 2;
+                    }
+                }
+                
+                // Ensure the animation is playing
+                image_speed = walk_speed;
+            }
+            
+            if (path_position == 1) {
+                path_end();
+                sprite_index = spr_emilio_idle_b;
+                image_speed = idle_speed;
+                has_reached_target = true; // Flag to prevent position reset
+                other.current_state = SceneState.DIALOGUE;
+            }
+        }
         break;
 		
 	case SceneState.DIALOGUE:

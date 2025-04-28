@@ -1,2 +1,3 @@
+depth = obj_table_note.depth - 1;
 show_note_msg = false;
-depth = -1000;
+show_debug_message(" note depth: " + string(obj_note.depth));

@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
   "%Name":"Kitchen_Cabinet_Empty",
-  "bboxMode":0,
-  "bbox_bottom":139,
+  "bboxMode":2,
+  "bbox_bottom":87,
   "bbox_left":0,
   "bbox_right":139,
   "bbox_top":0,

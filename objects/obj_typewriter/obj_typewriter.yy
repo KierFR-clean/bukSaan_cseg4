@@ -11,8 +11,8 @@
   "name":"obj_typewriter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"obj_logic",
+    "path":"folders/Objects/obj_logic.yy",
   },
   "parentObjectId":null,
   "persistent":false,
