@@ -1,14 +1,9 @@
-
-
 if (!variable_global_exists("game_events")) {
     global.game_events = {
         amara_diego_at_painting: false,
-
-
+        kitchen_puzzle_solved: false
     };
 }
-
-
 
 if (!global.game_events.amara_diego_at_painting) {
 	
@@ -42,4 +37,16 @@ if (!global.game_events.amara_diego_at_painting) {
 
 
     global.game_events.amara_diego_at_painting = true;
+}
+
+// If the kitchen puzzle is not solved, go back to kitchen
+if (!global.game_events.kitchen_puzzle_solved && !global.kitchen_puzzle_solved) {
+    // Create a fade transition back to the kitchen
+    var fade = instance_create_layer(0, 0, "Instances", obj_fade);
+    fade.target_room = rm_kitchen;
+    fade.target_x = 1100;
+    fade.target_y = 355;
+    
+    // Show a message to the player
+    show_message("You need to solve the puzzle in the kitchen first!");
 }

@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
   "%Name":"Dining_Table_Orange",
-  "bboxMode":0,
-  "bbox_bottom":159,
+  "bboxMode":2,
+  "bbox_bottom":104,
   "bbox_left":0,
   "bbox_right":159,
   "bbox_top":0,

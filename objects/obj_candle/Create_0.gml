@@ -1,0 +1,1 @@
+depth = obj_diningtbl_orng.depth - 1;

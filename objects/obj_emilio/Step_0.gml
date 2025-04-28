@@ -3,7 +3,7 @@ if (controllable) {
     var key_left = keyboard_check(vk_left);
     var key_down = keyboard_check(vk_down);
     var key_up = keyboard_check(vk_up);
-	depth = -y;
+	depth = -bbox_bottom;
     
     // Simplified key collision prevention
     if ((key_right && key_left) || (key_up && key_down) ||

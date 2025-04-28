@@ -5,3 +5,5 @@ if (keyboard_check_pressed(vk_enter)) {
         show_note_msg = !show_note_msg;
     }
 }
+
+depth = obj_table_note.depth - 1;

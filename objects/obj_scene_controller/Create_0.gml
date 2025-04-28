@@ -35,4 +35,11 @@ path_to_follow = -1;
 
 depth = -1000;
 
+// Function to solve the kitchen puzzle
+function solve_kitchen_puzzle() {
+    global.game_events.kitchen_puzzle_solved = true;
+    global.kitchen_puzzle_solved = true;
+    show_message("Puzzle solved! You can now proceed to the hallway.");
+}
+
 

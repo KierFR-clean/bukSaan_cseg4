@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"obj_bookshelf",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_bookshelf",
   "overriddenProperties":[],
@@ -9,11 +12,8 @@
     "name":"obj_Living_Room",
     "path":"folders/Objects/obj_Living_Room.yy",
   },
-  "parentObjectId":{
-    "name":"obj_collision_wall",
-    "path":"objects/obj_collision_wall/obj_collision_wall.yy",
-  },
-  "persistent":true,
+  "parentObjectId":null,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

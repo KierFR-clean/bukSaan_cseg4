@@ -1,5 +1,5 @@
-target_room = rm_kitchen;
-player_x = 1100;
-player_y = 355;
+target_room = rm_living;
+player_x = 350;
+player_y = 390;
 transition_width = 32;
 transition_height = 32;
