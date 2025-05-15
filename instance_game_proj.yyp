@@ -118,6 +118,7 @@
     {"id":{"name":"Chair_West","path":"sprites/Chair_West/Chair_West.yy",},},
     {"id":{"name":"Clock","path":"sprites/Clock/Clock.yy",},},
     {"id":{"name":"Curtain","path":"sprites/Curtain/Curtain.yy",},},
+    {"id":{"name":"Dialogue_Box","path":"sprites/Dialogue_Box/Dialogue_Box.yy",},},
     {"id":{"name":"Dining_Table_LS","path":"sprites/Dining_Table_LS/Dining_Table_LS.yy",},},
     {"id":{"name":"Dining_Table_Middle","path":"sprites/Dining_Table_Middle/Dining_Table_Middle.yy",},},
     {"id":{"name":"Dining_Table_Orange","path":"sprites/Dining_Table_Orange/Dining_Table_Orange.yy",},},
