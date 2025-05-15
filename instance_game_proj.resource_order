@@ -72,6 +72,7 @@
     {"name":"snd_bg","order":1,"path":"sounds/snd_bg/snd_bg.yy",},
     {"name":"snd_typewriter","order":2,"path":"sounds/snd_typewriter/snd_typewriter.yy",},
     {"name":"Background","order":18,"path":"sprites/Background/Background.yy",},
+    {"name":"Dialogue_Box","order":1,"path":"sprites/Dialogue_Box/Dialogue_Box.yy",},
     {"name":"spr_amara_idle_b","order":5,"path":"sprites/spr_amara_idle_b/spr_amara_idle_b.yy",},
     {"name":"spr_amara_idle_f","order":4,"path":"sprites/spr_amara_idle_f/spr_amara_idle_f.yy",},
     {"name":"spr_amara_idle_l","order":7,"path":"sprites/spr_amara_idle_l/spr_amara_idle_l.yy",},
